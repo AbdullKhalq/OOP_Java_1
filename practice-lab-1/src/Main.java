@@ -5,20 +5,30 @@ public class Main {
         String name;
         short age;
         
-        // var 'reader' of type 'Scanner' class. 
-        // can be used to read input using correct method
+        /* 
+         * var 'reader' of type 'Scanner' class. 
+         * can be used to read input using by calling
+         * the appropriate method for the expected input
+         */
         Scanner reader = new Scanner(System.in);
 
         System.out.print("Enter your name: ");
         
-        // 'reader' an object of 'Scanner' class, which has method 'nextLine'
+        // 'reader' an object of 'Scanner' class, 
+        // which has method 'nextLine'
         name = reader.nextLine();
 
         System.out.print("Enter your age: ");
         age = reader.nextShort();
 
-        // print with format. '%' placeholder 's' string 'd' decimal int,
-        // followed by var's respectively
+        // closes input stream to prevent resource leak
+        reader.close();
+
+        /* Method to print with format. '%' is a placeholder, 
+         * followed by format specifier (decimal, float string), 
+         * followed by arguments (parameters), 
+         * to be filled in the place holders respectively
+         */
         System.out.printf("Hello, \t%s of %d. Welcome to Java!", name, age);
 
         System.out.println(1);
