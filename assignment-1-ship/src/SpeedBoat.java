@@ -1,5 +1,3 @@
-import java.lang.classfile.Superclass;
-
 public class SpeedBoat extends Ship {
     private float enginePower, maxSpeed;
     private float acceleration = 1;
