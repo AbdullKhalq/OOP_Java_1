@@ -38,19 +38,19 @@
 public class Test {
     public static void main(String[] args) {
 
-       Ship ship1 = new Ship();
        Ship ship2 = new Ship("Titanic");
-       SpeedBoat speed1 = new SpeedBoat("Hello", 31.4f, 50.0f);
 
        ship2.setSpeed(2);
        ship2.setDirection(202.49);
 
-       System.out.println(ship2.getCardinalDirection());
-       System.out.println(ship2.degreesToRadians());
-       ship2.displayRadians();
-       ship2.displaySpeed();
-       ship2.displayLocationAndDirection();
-       ship2.displayCurrentPosition();
-       System.out.println(speed1.getName());
+       System.out.println("\n----Trying ship----\n");
+
+       ship2.displayAllInformation();
+
+       System.out.println("\n----Trying speedboat----\n");
+       
+       SpeedBoat speed1 = new SpeedBoat("Hello", 31.4f, 50.0f, 23, 180,35, 200, 12);
+
+       speed1.displayAllInformation();
     }
 }

@@ -9,7 +9,7 @@ public class Ship {
      * Add auto cardinal direction assign.
      */
     private String name; 
-    private double x, y, speed, direction, distance;
+    private double x, y, speed, direction;
     private String cardinalDirection;
 
     Ship() {    
@@ -42,7 +42,6 @@ public class Ship {
         this.x            = x;
         this.y            = y;
         this.direction    = direction;
-        this.cardinalDirection = getCardinalDirection();
     }
 
     void setName(String name) {
@@ -102,36 +101,8 @@ public class Ship {
         return cardinalDirection;
     }
 
-    void displayCurrentPosition() {
-        if (speed == 0) {
-            System.out.printf("%s is in (%f, %f)\n",
-                                getName(), getX(), getY());
-        }
-        else {
-            x += getSpeed() * Math.cos(getDirection() / 180.0);
-            y += getSpeed() * Math.sin(getDirection() / 180.0);
-            System.out.printf("%s is now in (%f, %f)\n", 
-                                getName(), getX(), getY());
-        }
-
-    }
-
     double degreesToRadians() {
-        return Math.toRadians(direction);
-    }
-
-    void displayRadians() {
-         // Express in terms of pi
-        double multipleOfPi = degreesToRadians() / Math.PI;  
-
-        // Output the result in the form nπ
-        if (multipleOfPi == (int) multipleOfPi) {
-            System.out.printf("%f in radians: %d * pi\n", 
-                                direction,(int) multipleOfPi);
-        } else {
-            System.out.printf("%f in radians: %.2f * pi\n", 
-                                direction, multipleOfPi);
-        }
+        return Math.toRadians(getDirection());
     }
 
     String checkDirectionNorthToEast() {
@@ -228,37 +199,57 @@ public class Ship {
         return cardinalDirection;
     }
 
-    String displayCardinalDirection() {
-        String cardinalDirection = null;
+    void displayName () {
+        System.out.printf("Name is %s\n", getName());
+    }
 
-        /*
-         * Table of directions in degrees (clockwise) for refrence
-         * North            337.5   <  x <      380 
-         *                            &&
-         *                  0       <  x <      22.5
-         * 
-         * North-east       22.5    <= x <=     67.5
-         * East             67.5    <  x <      112.5
-         * South-east       112.5   <= x <=     157.5
-         * South            157.5   <  x <      202.5
-         * South-west       202.5   <= x <=     247.5
-         * West             247.5   <  x <      292.5
-         * North-west       292.5   <= x <=     337.5
-         */
+    void displayRadians() {
+        // Express in terms of pi
+       double multipleOfPi = degreesToRadians() / Math.PI;  
 
-        return cardinalDirection;
+       // Output the result in the form nπ
+       if (multipleOfPi == (int) multipleOfPi) {
+           System.out.printf("%f in radians: %d * pi\n", 
+                               getDirection(),(int) multipleOfPi);
+       } else {
+           System.out.printf("%f in radians: %.2f * pi\n", 
+                               getDirection(), multipleOfPi);
+       }
+   }
+
+   void displayXYDirection() {
+        System.out.printf("%s coordinates are (%f, %f)\n",
+                          getName(), getX(), getY()); 
+    }
+
+    void displayCardinalDirection() {
+        System.out.printf("%s cardinal directions is %s \n",
+                          getName(), getCardinalDirection());
+    }
+
+    void displayCurrentPosition() {
+        if (speed == 0) {
+            System.out.printf("%s is in (%f, %f)\n",
+                                getName(), getX(), getY());
+        }
+        else {
+            x += getSpeed() * Math.cos(getDirection() / 180.0);
+            y += getSpeed() * Math.sin(getDirection() / 180.0);
+            System.out.printf("%s is now in (%f, %f)\n", 
+                                getName(), getX(), getY());
+        }
     }
 
     void displaySpeed() {
-        System.out.printf("\n%s speed is %f km/h\n", 
+        System.out.printf("%s speed is %f km/h\n", 
                           getName(), getSpeed());
     }
 
-    void displayLocationAndDirection() {
-        System.out.printf("%s coordinates are (%f, %f)\n",
-                            getName(), getX(), getY()); 
-        System.out.printf("Direction is %f %s\n",
-                            getDirection(), getCardinalDirection());
-        
-}
+    void displayAllInformation() {
+        displayName();
+        displayXYDirection();
+        displayCurrentPosition();
+        displayRadians();
+        displaySpeed();
+    }
 }
