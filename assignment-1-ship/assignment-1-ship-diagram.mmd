@@ -1,0 +1,84 @@
+classDiagram
+    direction LR
+    Ship --|> SpeedBoat : inheritance
+    Test -- Ship 
+    Test -- SpeedBoat
+
+    class Test {
+        + main(String[] args)void
+    }
+
+
+    class Ship {
+        - name : string
+        - x : double
+        - y : double
+        - speed : double
+        - direction : double
+        - cardinalDirection : String
+        
+        + Ship()
+        + Ship(String name) void
+        + Ship(String name, double x, double y) void
+        + Ship(String name, double x, double y, double speed) void
+        + Ship(String name, double x, double y, double speed, double direction) void
+        + setName(String name) void
+        + setX(double x) void
+        + setY(double y) void
+        + setDirection(double direction)
+        + setSpeed(double speed) void
+        + getName() String
+        + getX() double
+        + getY() double
+        + getSpeed() double
+        + getDirection() double
+        + getCardinalDirection() String
+        + displayName() void
+        + displayRadians() void
+        + displayXYDirection() void
+        + displayCardinalDirection() void
+        + displayCurrentPosition() void
+        + displaySpeed() void
+        + displayAllInformation() void
+        + degressToRadians() double
+        + checkDirectionNorthToEast() String
+        + checkDirectionEastToSouth() String
+        + checkDirectionSouthToWest() String
+        + checkDirectionWestToNorth() String
+
+
+    }
+
+    class SpeedBoat {
+        - enginePower : float
+        - maxSpeed : float
+        - acceleration : float
+
+        + SpeedBoat(String name) void
+        + SpeedBoat(String name, double x, double y) void
+        + SpeedBoat(String name, double x, double y, double speed, double direction) void
+        + SpeedBoat(String name, double x, double y, double speed, float enginePower, float maxSpeed) void
+        + SpeedBoat (String name, double x, double y, double speed, double direction, float enginePower, float maxSpeed, float acceleration) void
+        + setAcceleration(float acceleration) void
+        + setMaxSpeed(float maxSpeed) void
+        + setAcceleration(float acceleration) void
+        + getEnginePower() float
+        + getMaxSpeed() float
+        + getAcceleration() float
+        + displayEnginePower() void
+        + displayMaxSpeed() void
+        + displayAcceleration() void
+        + displayAllInformation() void
+
+    }
+
+    DemoClient --> DemoServer : requests
+    DemoClient <-- DemoServer : responds
+
+    class DemoClient {
+        + main(String[] args)void
+    }
+
+    class DemoServer {
+        + main(String[] args)void
+    }
