@@ -13,7 +13,9 @@ public class DemoServer {
             System.out.println("Connection established");
 
             // reads data from socket rather than keyboard
-            BufferedReader input = new BufferedReader(new InputStreamReader(newSock.getInputStream()));
+            BufferedReader input = new BufferedReader
+                                    (new InputStreamReader
+                                    (newSock.getInputStream()));
             String str = input.readLine();
 
             PrintWriter printOut = new PrintWriter

@@ -12,7 +12,8 @@ public class Test {
 
        System.out.println("\n----Trying speedboat----\n");
        
-       SpeedBoat speed1 = new SpeedBoat("Hello", 31.4f, 50.0f, 23, 180,35, 200, 12);
+       SpeedBoat speed1 = new SpeedBoat("Hello", 31.4f, 50.0f,
+                                         23, 180,35, 200, 12);
 
        speed1.displayAllInformation();
     }
