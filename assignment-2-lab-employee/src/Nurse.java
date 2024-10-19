@@ -7,9 +7,10 @@ public class Nurse extends Employee {
     }
 
     public Nurse(int iD, String name, String email, 
-                 String phoneNumber, char gender, double salary, 
+                 String phoneNumber, String address,
+                 char gender, double salary, 
                  String position) {
-        super(iD, name, email, phoneNumber, gender, salary);
+        super(iD, name, email, phoneNumber, address, gender, salary);
         this.position = position;
     }
 

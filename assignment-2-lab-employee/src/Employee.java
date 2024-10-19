@@ -1,6 +1,6 @@
 public class Employee {
     private int ID;
-    private String name, email, phoneNumber;
+    private String name, email, phoneNumber, address;
     private char gender;
     private double salary;
 
@@ -8,12 +8,14 @@ public class Employee {
     }
 
     public Employee(int iD, String name, String email, 
-                    String phoneNumber, char gender, double salary) {
+                    String phoneNumber, String address,
+                    char gender, double salary) {
         this.ID = iD;
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.gender = gender;
+        this.address = address;
         this.salary = salary;
     }
 
@@ -47,6 +49,12 @@ public class Employee {
     public void setGender(char gender) {
         this.gender = gender;
     }
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
     public double getSalary() {
         return salary;
     }
@@ -55,10 +63,12 @@ public class Employee {
     }
 
     public void displayAllInformation() {
-        System.out.printf("ID: %d\nName: %s\nGender: %s\n" + 
-                          "Email: %s\nPhone: %s\nSalary: %f\n", 
+        System.out.printf("ID: %d\nName: %s\nGender: %s\n"      + 
+                          "Email: %s\nPhone: %s\nAddress: %s\n"   +
+                          "Salary: %f\n", 
         getID(), getName(), getGender(), 
-        getEmail(), getPhoneNumber(), getSalary());
+        getEmail(), getPhoneNumber(), getAddress(), 
+        getSalary());
     }
     
 }

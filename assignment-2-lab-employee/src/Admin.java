@@ -6,16 +6,15 @@ public class Admin extends Employee {
     }    
 
     public Admin(int iD, String name, String email, 
-                 String phoneNumber, char gender, 
-                 double salary, String jobTitle) {
-        super(iD, name, email, phoneNumber, gender, salary);
+                 String phoneNumber, String address, 
+                 char gender, double salary, String jobTitle) {
+        super(iD, name, email, phoneNumber, address, gender, salary);
         this.jobTitle = jobTitle;
     }
 
     public String getJobTitle() {
         return jobTitle;
     }
-
     public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
     }

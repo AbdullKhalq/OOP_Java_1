@@ -7,10 +7,10 @@ public class Doctors extends Employee {
     }
 
     public Doctors(int iD, String name, String email, 
-                   String phoneNumber, char gender, 
-                   double salary, String ranking,
-                   String specialty) {
-        super(iD, name, email, phoneNumber, gender, salary);
+                   String phoneNumber, String address, 
+                   char gender, double salary, 
+                   String ranking, String specialty) {
+        super(iD, name, email, phoneNumber, address, gender, salary);
         this.ranking = ranking;
         this.specialty = specialty;
     }
