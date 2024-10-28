@@ -15,17 +15,17 @@ public class Person {
         this.name = name;
     }
 
-    public int getiD() {
+    public int getID() {
         return iD;
     }
 
-    public void setiD(int iD) {
+    public void setID(int iD) {
         this.iD = iD;
     }
 
     void display() {
         System.out.printf("---Person Information---\n" +
-                          "ID: %d\nName: %s\n", getiD(), getName());
+                          "ID: %d\nName: %s\n", getID(), getName());
     }
 
 }
