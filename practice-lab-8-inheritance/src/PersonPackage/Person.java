@@ -1,3 +1,5 @@
+package PersonPackage;
+
 public class Person {
     private int iD;
     private String name;
@@ -24,7 +26,7 @@ public class Person {
     }
 
     void display() {
-        System.out.printf("---Person Information---\n" +
+        System.out.printf("---Information---\n" +
                           "ID: %d\nName: %s\n", getID(), getName());
     }
 

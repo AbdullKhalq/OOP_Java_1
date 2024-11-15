@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/assignment-1-ship/assignment-1-ship.iml" filepath="$PROJECT_DIR$/assignment-1-ship/assignment-1-ship.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/learning-oop-java.iml" filepath="$PROJECT_DIR$/.idea/learning-oop-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice-lab-1/practice-lab-1.iml" filepath="$PROJECT_DIR$/practice-lab-1/practice-lab-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice-lab-6/practice-lab-6.iml" filepath="$PROJECT_DIR$/practice-lab-6/practice-lab-6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice-lab-8-inheritance/practice-lab-8-inheritance.iml" filepath="$PROJECT_DIR$/practice-lab-8-inheritance/practice-lab-8-inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice-lab-student-information/practice-lab-student-information.iml" filepath="$PROJECT_DIR$/practice-lab-student-information/practice-lab-student-information.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice-lec-2.1/practice-lec-2.1.iml" filepath="$PROJECT_DIR$/practice-lec-2.1/practice-lec-2.1.iml" />
+    </modules>
+  </component>
+</project>

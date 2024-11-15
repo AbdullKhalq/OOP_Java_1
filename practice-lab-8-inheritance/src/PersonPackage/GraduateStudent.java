@@ -1,3 +1,5 @@
+package PersonPackage;
+
 public class GraduateStudent extends Student {
     private String thesisTitle;
 

@@ -1,3 +1,5 @@
+package PersonPackage;
+
 public class Advisor extends Person {
     private String dept;
 
