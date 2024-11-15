@@ -14,16 +14,20 @@ public class MainPerson {
                 "CS", "πSmart for better Future!");
 
         Employee hsson = new Employee(900, "hsson", "Analysis",
-                                      6700);
+                                6700);
+
+        Employee modhi = new Employee(1200, "modhi", "Security Analysis", 
+                                7900, 65);
 
         Lawyer lawyer1 = new Lawyer(2, "James McGill", "copywriter",
-                                    1000000, "Illicit Trades");
+                                1000000, "Illicit Trades");
 
         folan.displayInfo();
         alaan.displayInfo();
         folana.displayInfo();
         theGS.displayInfo();
         hsson.displayInfo();
+        modhi.displayInfo();
         lawyer1.displayInfo();
     }
 }

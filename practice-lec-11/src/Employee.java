@@ -49,7 +49,7 @@ public class Employee extends Person {
     @Override
     void displayInfo() {
         super.displayInfo();
-        System.out.printf("Fortune: %,2\nVacation Days: %d\n",
-                getFortune(), getVacationDays());
+        System.out.printf("Job title: %s\nFortune: %d\nVacation Days: %d\n",
+                getJobTitle(), getFortune(), getVacationDays());
     }
 }
